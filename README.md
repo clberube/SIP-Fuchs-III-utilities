@@ -1,5 +1,5 @@
 # SIP-Fuchs-res2csv
-Script to convert SIP-Fuchs-III result files to csv format
+This script converts SIP-Fuchs-III result files to a csv format.
 
 ## Usage
 ```console
