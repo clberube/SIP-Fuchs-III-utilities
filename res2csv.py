@@ -44,8 +44,10 @@ def main(filename):
             'dR /%', 'dP /°', 'Current /mA',
             'Date Time']
 
+    date = df['Date /ddmmyy'].str.replace(".", "-", regex=False)
+    time = df['Time /hhmmss'].str.replace(" ", "", regex=False)
     df['Date Time'] = pd.to_datetime(
-        df['Date /ddmmyy'].str.replace(".", "-") + ' ' + df['Time /hhmmss'].str.replace(" ", ""))
+        date + ' ' + time)
 
 
     df['dR /%'] = df['Rhoa/Ohm*m'] * df['dR /%'] / 100
