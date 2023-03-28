@@ -65,7 +65,7 @@ def main(filename):
 
     new_filename = filename.with_suffix('.csv')
     df.to_csv(new_filename, index=None)
-
+    print(f"Wrote file {new_filename.resolve()}")
 
 
 parser = argparse.ArgumentParser()
